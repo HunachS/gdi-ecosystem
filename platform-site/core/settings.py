@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'platform_api',
 ]
 
 MIDDLEWARE = [
@@ -114,7 +115,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
+# folders for pictures
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [BASE_DIR / 'static'] # Create a folder in platform-site
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media' # Input proofs-photo
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
